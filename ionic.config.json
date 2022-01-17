@@ -1,0 +1,7 @@
+{
+  "name": "multifactor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
