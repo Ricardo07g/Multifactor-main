@@ -25,3 +25,50 @@
 #container a {
   text-decoration: none;
 }
+/* css item da lista de serviços*/
+.div_codigo{
+  font-size: 30pt;
+  color: #3880ff;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+.codigo01{
+  padding-right: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.codigo02{
+  padding-left: 3px;
+
+}
+
+.item_servico{
+  font-size: 10pt;
+  color: #8c8c8c;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.item_email{
+  font-size: 10pt;
+  color: #8c8c8c;
+  font-family: monospace;
+}
+
+.barra_progoresso{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  align-items: stretch;
+  align-content: flex-end;
+}
+
+
+.icons_add{
+  width: 40px;
+  height: 40px;
+}

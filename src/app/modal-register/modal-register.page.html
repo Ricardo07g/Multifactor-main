@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Registrar nova credencial</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        Model : {{ name }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+-->
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+          <ion-label floating>Nome do serviço: </ion-label>
+          <ion-input type="text" [(ngModel)]="title"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Segredo: </ion-label>
+          <ion-input type="text" maxlength="18" [(ngModel)]="secret" (ionChange)="textareaMaxLengthValidation()"></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <ion-button type="button" color="primary" expand="block" (click)="save()">
+    Salvar
+  </ion-button>
+
+
+</ion-content>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="close()" color="danger">
+    <ion-icon name="close-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

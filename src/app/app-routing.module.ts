@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'modal-register',
+    loadChildren: () => import('./modal-register/modal-register.module').then( m => m.ModalRegisterPageModule)
+  },
 ];
 
 @NgModule({

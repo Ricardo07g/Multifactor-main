@@ -1,20 +1,55 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+      <ion-title style="text-align: center;">Authenticator</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Default Refresher -->
+  <ion-refresher slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+      <ion-item-sliding *ngFor="let password of passwords">
+
+        <ion-item (click)="copy(password.password)">
+          <ion-label value="{{password.id}}">
+            <span class="item_servico"> Serviço: {{password.title}}</span>
+            
+            <div class="div_codigo">
+              <span class="codigo01">{{password.password}}</span>
+            </div>
+
+            <!-- <span class="item_email">{{password.title}}</span>-->
+            <span class="item_email">id: {{password.id}}</span>
+
+          </ion-label>
+        </ion-item>
+
+        <ion-item-options side="end" icon-start>
+
+          <ion-item-option color="danger" (click)="remove_credencial(password.id)">  
+            <ion-icon slot="top" name="trash" style="width: 30px; height: 30px; margin: 5px 5px 5px 5px;"></ion-icon>
+            Remover
+          </ion-item-option>
+
+        </ion-item-options>
+
+      </ion-item-sliding>
+  </ion-list>
+
 </ion-content>
+
+
+<!-- fab colocado na extremidade inferior -->
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" style="margin-bottom: 50px !important;">
+  <ion-fab-button>
+    <ion-icon name="add" (click)="initModal()"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-footer padding-left>
+    <p style="text-align: center;">{{countdown != null ? countdown+' segundos restantes': 'Nenhuma credencial registrada'}}</p>
+</ion-footer>
