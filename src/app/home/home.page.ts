@@ -58,7 +58,7 @@ export class HomePage {
     if (modalDataResponse !== null)
     {
         this.modalDataResponse = modalDataResponse.data;
-        console.log('Modal Sent Data : '+ modalDataResponse.data);
+        //console.log('Modal Sent Data : '+ modalDataResponse.data);
       }
     });
 
