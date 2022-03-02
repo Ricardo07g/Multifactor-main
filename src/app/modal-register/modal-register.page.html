@@ -23,7 +23,7 @@
       </ion-item>
       <ion-item>
           <ion-label floating>Segredo: </ion-label>
-          <ion-input type="text" maxlength="18" [(ngModel)]="secret" (ionChange)="textareaMaxLengthValidation()"></ion-input>
+          <ion-input type="text" maxlength="40" [(ngModel)]="secret" (ionChange)="textareaMaxLengthValidation()"></ion-input>
       </ion-item>
   </ion-list>
 
@@ -35,7 +35,7 @@
 </ion-content>
 
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button (click)="close()" color="danger">
+  <ion-fab-button color="danger"(click)="close()">
     <ion-icon name="close-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>

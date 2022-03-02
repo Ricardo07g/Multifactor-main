@@ -37,6 +37,7 @@ export class ModalRegisterPage implements OnInit {
   }
 
   public async save() {
+    this.secret = this.secret.replace(/ /g, "");
     let verifica_hash = this.passwordGenerator.getOTP(this.secret);
     if(this.title && this.secret && verifica_hash !== false ) {
         this.database.insert(this.title, this.secret).then(async result => {
@@ -60,13 +61,13 @@ export class ModalRegisterPage implements OnInit {
   }
 
   public async textareaMaxLengthValidation() {
-    if (this.secret.length > 20)
+    this.secret = this.secret.replace(/ /g, ""); 
+    if ((this.secret.length * 4) > 160)
     {
-      this.secret= this.secret.slice(0, 20);
       const alerta = await this.alertCtrl.create({
         header: 'Atenção!',
         subHeader: 'tamanho máximo excedido',
-        message: 'o segredo não pode ultrapassar 18 caracteres.',
+        message: 'o segredo não pode ultrapassar 160 bits.',
         buttons: ['OK']
       });
       await alerta.present();
