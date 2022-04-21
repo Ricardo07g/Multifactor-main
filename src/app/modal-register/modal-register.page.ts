@@ -37,37 +37,41 @@ export class ModalRegisterPage implements OnInit {
   }
 
   public async save() {
+
     this.secret = this.secret.replace(/ /g, "");
-    let verifica_hash = this.passwordGenerator.getOTP(this.secret);
-    if(this.title && this.secret && verifica_hash !== false ) {
+    let check_hash = this.passwordGenerator.getOTP(this.secret);
+
+    if(this.title && this.secret && check_hash !== false )
+    {
         this.database.insert(this.title, this.secret).then(async result => {
             const closeModal: string = "Modal Closed";
             await this.modalCtr.dismiss(closeModal);
-            //this.navCtrl.setRoot(this.navCtrl.getActive().component);
             location.reload();
         }, error => {
-            alert('erro ao salvar credenciais');
+            alert('error saving credentials');
         });
+
     }else{
-      alert('hash invalida.');
-      const alerta = await this.alertCtrl.create({
-        header: 'Atenção!',
-        subHeader: 'hash invalida',
-        message: 'Não conseguimos gerar um OTP atravéz deste segredo',
+
+      const alert_error = await this.alertCtrl.create({
+        header: 'Attention!',
+        subHeader: 'invalid hash',
+        message: 'Cannot generate an OTP via this secret',
         buttons: ['OK']
       });
-      await alerta.present();
+      
+      await alert_error.present();
     }
   }
 
   public async textareaMaxLengthValidation() {
     this.secret = this.secret.replace(/ /g, ""); 
-    if ((this.secret.length * 4) > 160)
+    if ((this.secret.length * 4) > 320)
     {
       const alerta = await this.alertCtrl.create({
-        header: 'Atenção!',
-        subHeader: 'tamanho máximo excedido',
-        message: 'o segredo não pode ultrapassar 160 bits.',
+        header: 'Attention!',
+        subHeader: 'maximum size exceeded',
+        message: 'the secret cannot exceed 320 bits.',
         buttons: ['OK']
       });
       await alerta.present();

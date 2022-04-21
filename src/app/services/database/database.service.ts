@@ -70,7 +70,7 @@ export class DatabaseService
         });
     }
 
-    public retrieve()
+    public getContent()
     {   
         return new Promise((resolve, reject) => {
             
@@ -80,20 +80,24 @@ export class DatabaseService
             })
             .then((db: SQLiteObject) => {
                 db.executeSql("SELECT id, title, secret FROM passwords", []).then((data) => {
-                    if(data.rows && data.rows.length > 0) {
+                    if(data.rows && data.rows.length > 0)
+                    {
                         let passwords = [];
-                        for(let i = 0; i < data.rows.length; i++) {
+                        
+                        for(let i = 0; i < data.rows.length; i++)
+                        {
                             passwords.push({
                                 "id": data.rows.item(i).id,
                                 "title": data.rows.item(i).title,
                                 "secret": data.rows.item(i).secret,
                             });
                         }
+
                         resolve(passwords);
                     }
                 }, (error) => {
                     reject(error);
-                    alert('retrieve: Error');
+                    alert('getContent: Error');
                 });
     
             }).catch(e => alert('db: '+e));

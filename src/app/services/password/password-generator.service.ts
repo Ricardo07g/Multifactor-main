@@ -34,6 +34,7 @@ export class PasswordGeneratorService {
     {
         value = Array(length + 1 - value.length).join(pad) + value;
     }
+
     return value;
   }
 
@@ -54,12 +55,14 @@ export class PasswordGeneratorService {
         let chunk = bits.substr(i, 4);
         hex = hex + parseInt(chunk, 2).toString(16) ;
     }
+
     return hex;
   }
 
   public getOTP(secret: string)
   {
     try {
+
         let epoch = Math.round(new Date().getTime() / 1000.0);
         let time = this.leftpad(this.dec2hex(Math.floor(epoch / 30)), 16, "0");
         let hmacObj = new jsSHA(time, "HEX");
@@ -68,11 +71,10 @@ export class PasswordGeneratorService {
         var otp = (this.hex2dec(hmac.substr(offset * 2, 8)) & this.hex2dec("7fffffff")) + "";
         otp = (otp).substr(otp.length - 6, 6);
 
-    } catch (error) {      
-         alert('erro_OTP: '+error);
+    } catch (error) {  
          return false;
-         //throw error;
     }
+
     return otp;
   }
 

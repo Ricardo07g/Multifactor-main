@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import { NavController , ModalController, AlertController } from '@ionic/angular';
 import { Clipboard } from "@ionic-native/clipboard";
 import { Toast } from '@ionic-native/toast';
-//import { CreatePage } from "../create/create";
 import { PasswordGeneratorService } from '../services/password/password-generator.service';
 import { DatabaseService } from '../services/database/database.service';
 import { ModalRegisterPage } from '../modal-register/modal-register.page';
 import { JsonPipe } from '@angular/common';
 
-type teste = 
+type struct_password = 
 {
   id: number,
   title: string,
@@ -42,23 +41,22 @@ export class HomePage {
 
   public ionViewDidEnter()
   {
-    this.retrievePasswords();
-    this.ticker();
+    this.getPasswords();
+    this.timer();
   }
 
   async initModal() {
     const modal = await this.modalCtrl.create({
       component: ModalRegisterPage,
       componentProps: {
-        'name': 'Registrar nova Credencial'
+        'name': 'Register new credential'
       }
     });
 
     modal.onDidDismiss().then((modalDataResponse) => {
-    if (modalDataResponse !== null)
-    {
+      if (modalDataResponse !== null)
+      {
         this.modalDataResponse = modalDataResponse.data;
-        //console.log('Modal Sent Data : '+ modalDataResponse.data);
       }
     });
 
@@ -67,70 +65,78 @@ export class HomePage {
 
   public copy(value: string)
   {
-    Toast.show("Código copiado!", "3000", "bottom").subscribe(
+    Toast.show("Code '"+value+"' copied!", "2000", "bottom").subscribe(
         toast => {
             Clipboard.copy(value);
         }
     );
   }
 
-  private ticker()
+  private timer()
   {
     let epoch = Math.round(new Date().getTime() / 1000.0);
     this.countdown = (30 - (epoch % 30));
-    if(epoch % 30 == 0) {
-        if(epoch > this.epochSnapshot + 5) {
-            this.epochSnapshot = epoch;
-            this.retrievePasswords();
-        }
+
+    if(epoch % 30 == 0)
+    {
+      if(epoch > this.epochSnapshot + 5)
+      {
+          this.epochSnapshot = epoch;
+          this.getPasswords();
+      }
     }
+
     setTimeout(() => {
-        this.ticker();
+        this.timer();
     }, 100);
+
   }
 
-  public retrievePasswords()
+  public getPasswords()
   {
-    this.database.retrieve()
-      .then((results: Array<teste>) => {
-        this.passwords = [];
-          for(let i = 0; i < results.length; i++) {
- 
-              this.passwords.push({
-                  "id": results[i].id,
-                  "title": results[i].title,
-                  "password": this.passwordGenerator.getOTP(results[i].secret)
-              });
+    this.database.getContent()
+      .then((results: Array<struct_password>) => {
 
-          }    
+        this.passwords = [];
+
+        for(let i = 0; i < results.length; i++)
+        {
+          this.passwords.push({
+              "id": results[i].id,
+              "title": results[i].title,
+              "password": this.passwordGenerator.getOTP(results[i].secret)
+          });
+        }    
+
       }, error => {
           console.error(error);
       });
       
   }
 
-  public async remove_credencial(id:any)
+  public async remove_credential(id:any)
   { 
-    let alerta = await this.alertCtrl.create({
-      header: 'Atenção!',
-      subHeader: 'esta operação não pode ser desfeita.',
-      message: 'Deseja realmente remover esta credencial?',
+    let alert_credential = await this.alertCtrl.create({
+      header: 'Attention!',
+      subHeader: 'this operation cannot be undone.',
+      message: 'Do you really want to remove this credential?',
       buttons: [
         {
-          text: 'cancelar',
+          text: 'cancel',
           handler: () => {
-            console.log('por hora, nada a ser feito.');
+            console.log('for now, nothing to be done.');
           }
         },
         {
-          text: 'Remover',
+          text: 'Delete',
           handler: () => {
             if(id) 
             {
               this.database.delete(id).then(result => {
-                  this.retrievePasswords();
+                  this.getPasswords();
+                  location.reload();
               }, error => {
-                  alert('falha ao remover credencial.');
+                  alert('failed to remove credential.');
               });
             }
           }
@@ -143,7 +149,7 @@ export class HomePage {
 
   doRefresh(event) {  
     setTimeout(() => {
-      this.retrievePasswords();
+      this.getPasswords();
       event.target.complete();
     }, 1500); 
   } 
