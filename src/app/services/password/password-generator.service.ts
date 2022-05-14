@@ -14,9 +14,7 @@ export class PasswordGeneratorService {
     this.navParams = NavParams;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad passsword-generator');
-  }
+  ionViewDidLoad() {}
 
   private dec2hex(value: number)
   { 
