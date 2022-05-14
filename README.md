@@ -21,12 +21,14 @@ Este projeto é um trabalho de conclusão de curso e tem por objetivo a constru�
 
 ###  Compilação deste projeto para IOS
 Caso deseje desenvolver este projeto para o sistema operacional IOS é recomendado seguir a documentação da própria Framework pois podem haver peculiaridades na configuração do ambimente de compilação do mesmo, sugiro acessar [este link](https://ionicframework.com/docs/developing/ios).
+
 Por fim para executar o Projeto basta se dirigir ao diretório raiz do mesmo e digitar o seguinte comando no terminal :
 
     $ ionic cordova run ios -l --external
     
 ###  Compilação deste projeto para Android
 Caso deseje desenvolver este projeto para o sistema operacional Android é recomendado seguir a documentação da própria Framework pois podem haver peculiaridades na configuração do ambimente de compilação do mesmo, sugiro acessar [este link](https://ionicframework.com/docs/developing/android).
+
 Por fim para executar o Projeto basta se dirigir ao diretório raiz do mesmo e digitar o seguinte comando no terminal:
 
     $ ionic cordova run android -l
