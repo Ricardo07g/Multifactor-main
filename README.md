@@ -124,3 +124,6 @@ https://www.researchgate.net/profile/Fadi-Aloul/publication/228972704_Multi_Fact
 6 - Criando um gerenciador de senhas de uso único baseado em tempo com o Ionic 2.  Acessado em 28 de ago de 2021. Disponível em: https://www.thepolyglotdeveloper.com/2016/08/build-time-based-one-time-password-manager-ionic-2/
 
 7 - Gerando senhas de uso único baseadas em tempo com JavaScript.2021. Acessado em 28 de ago de 2021. Disponível em: https://www.thepolyglotdeveloper.com/2014/10/generate-time-based-one-time-passwords-javascript/
+
+8 - Google Authenticator One-time Password Algorithm in Javascript.2021. Acessado em 28 de ago de 2021. Disponível em:
+http://blog.tinisles.com/2011/10/google-authenticator-one-time-password-algorithm-in-javascript/
