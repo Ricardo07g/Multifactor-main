@@ -98,8 +98,8 @@ O serviço password  contém toda a regra de negócio que utilizaremos para   ca
 |   ├── database.service.spec.ts
 |   └── database.service.ts
 ├── password
-|   ├── password-generator.service.spec.ts
-|   └── password-generator.service.ts
+|   ├── password.service.spec.ts
+|   └── password.service.ts
 ```
 ## Referências
 Para construção desta aplicação foram utilizadas as seguintes referências:
