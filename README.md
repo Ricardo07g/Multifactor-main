@@ -105,8 +105,7 @@ O serviço password  contém toda a regra de negócio que utilizaremos para   ca
 Para construção desta aplicação foram utilizadas as seguintes referências:
 
 1 - Basit, A., Zafar, M., Liu, X. et al. A comprehensive survey of AI-enabled  
-phishing attacks detection techniques. Telecommun Syst 76, 139–154 (2021). https://doi.org/10.1007/  
-020-00733-2  
+phishing attacks detection techniques. Telecommun Syst 76, 139–154 (2021). https://doi.org/10.1007/020-00733-2  
 
 2 - Lamport, Leslie (1981). Password authentication with insecure communication.  
 Communications of the ACM, 24(11), 770–772. doi:10.1145/358790.358797  
