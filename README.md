@@ -88,7 +88,7 @@ O serviço  database  contém toda a regra de negócio que necessária para util
 ### Serviço password 
 O serviço password  contém toda a regra de negócio que utilizaremos para   calcular e gerar de forma correta os segredos descartáveis.
 
-    ionic generate service database
+    ionic generate service password
     ionic capacitor sync
     
   No fim desta etapa o projeto estará com a seguinte configuração:
