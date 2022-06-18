@@ -110,19 +110,20 @@ phishing attacks detection techniques. Telecommun Syst 76, 139–154 (2021). htt
 2 - Lamport, Leslie (1981). Password authentication with insecure communication.  
 Communications of the ACM, 24(11), 770–772. doi:10.1145/358790.358797  
 
-3 - DBIR. 2020 Data Breach Investigations Report. Verizon. 2020. Acessado em  
-22 de ago de 2021. Disponível em: https://enterprise.verizon.com/resources/reports/2021-  
-data-breach-investigations-report.pdf  
+3 - DBIR. 2020 Data Breach Investigations Report. Verizon. 2020. Acessado em  22 de ago de 2021. 
+Disponível em: https://enterprise.verizon.com/resources/reports/2021-  data-breach-investigations-report.pdf
 
-4 - Relatório de tendências do Apwg. 2020. Acessado em 28 de ago de 2021. Dis-  
-ponível em:  https://docs.apwg.org//reports/apwg_trends_report_q2_2020.pdf  
+4 - Relatório de tendências do Apwg. 2020. Acessado em 28 de ago de 2021. 
+Disponível em:  https://docs.apwg.org//reports/apwg_trends_report_q2_2020.pdf  
 
-5 - texto a ser inserido sobre tutorial. Disponível em: https://www.overleaf.com/project/62254e  
-https://www.researchgate.net/profile/Fadi-Aloul/publication/228972704_Multi_Factor_
+5 - Multi Factor Authentication Using Mobile Phones. Acessado em 28 de ago de 2021. 
+Disponível em:  https://www.researchgate.net/profile/Fadi-Aloul/publication/228972704_Multi_Factor
 
-6 - Criando um gerenciador de senhas de uso único baseado em tempo com o Ionic 2.  Acessado em 28 de ago de 2021. Disponível em: https://www.thepolyglotdeveloper.com/2016/08/build-time-based-one-time-password-manager-ionic-2/
+6 - Criando um gerenciador de senhas de uso único baseado em tempo com o Ionic 2. Acessado em 28 de ago de 2021. 
+Disponível em: https://www.thepolyglotdeveloper.com/2016/08/build-time-based-one-time-password-manager-ionic-2/
 
-7 - Gerando senhas de uso único baseadas em tempo com JavaScript.2021. Acessado em 28 de ago de 2021. Disponível em: https://www.thepolyglotdeveloper.com/2014/10/generate-time-based-one-time-passwords-javascript/
+7 - Gerando senhas de uso único baseadas em tempo com JavaScript.2021. Acessado em 28 de ago de 2021. 
+Disponível em: https://www.thepolyglotdeveloper.com/2014/10/generate-time-based-one-time-passwords-javascript/
 
-8 - Google Authenticator One-time Password Algorithm in Javascript.2021. Acessado em 28 de ago de 2021. Disponível em:
-http://blog.tinisles.com/2011/10/google-authenticator-one-time-password-algorithm-in-javascript/
+8 - Google Authenticator One-time Password Algorithm in Javascript.2021. Acessado em 28 de ago de 2021. 
+Disponível em: http://blog.tinisles.com/2011/10/google-authenticator-one-time-password-algorithm-in-javascript/
