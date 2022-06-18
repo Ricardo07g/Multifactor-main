@@ -111,7 +111,7 @@ phishing attacks detection techniques. Telecommun Syst 76, 139–154 (2021). htt
 Communications of the ACM, 24(11), 770–772. doi:10.1145/358790.358797  
 
 3 - DBIR. 2020 Data Breach Investigations Report. Verizon. 2020. Acessado em  22 de ago de 2021. 
-Disponível em: https://enterprise.verizon.com/resources/reports/2021-  data-breach-investigations-report.pdf
+Disponível em: https://enterprise.verizon.com/resources/reports/2021-data-breach-investigations-report.pdf
 
 4 - Relatório de tendências do Apwg. 2020. Acessado em 28 de ago de 2021. 
 Disponível em:  https://docs.apwg.org//reports/apwg_trends_report_q2_2020.pdf  
