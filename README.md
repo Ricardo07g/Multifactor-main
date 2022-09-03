@@ -103,7 +103,7 @@ O serviço password  contém toda a regra de negócio que utilizaremos para   ca
 ```
 ## Referências
 Para construção desta aplicação foram utilizadas as seguintes referências:
-
+<!-- 
 1 - Basit, A., Zafar, M., Liu, X. et al. A comprehensive survey of AI-enabled  
 phishing attacks detection techniques. Telecommun Syst 76, 139–154 (2021).doi:10.1007/s11235-020-00733-2  
 
@@ -127,3 +127,27 @@ Disponível em: https://www.thepolyglotdeveloper.com/2014/10/generate-time-based
 
 8 - Google Authenticator One-time Password Algorithm in Javascript.2021. Acessado em 28 de ago de 2021. 
 Disponível em: http://blog.tinisles.com/2011/10/google-authenticator-one-time-password-algorithm-in-javascript/
+-->
+
+ALOUL WASSIM EL-HAJJ, S. Z. F. A. Multi factor authentication using mobile phones.
+International Journal of Applied Mathematics and Computer Science, v. 2, p. 65–80,
+2009. ISSN 1814-0424. Disponível em: https://www.researchgate.net/publication/228972704_Multi_Factor_Authentication_Using_Mobile_Phones
+
+APWG. Phishing Activity Trends Report, 2nd Quarter 2020. [S.l.], 2020. Disponível
+em: https://docs.apwg.org//reports/apwg_trends_report_q2_2020.pdf
+
+BASIT A., Z. M. L.-X. e. a. A comprehensive survey of ai-enabled phishing attacks
+detection techniques. Telecommun Syst, v. 76, p. 139–154, January 2021. ISSN 1572-9451.
+Disponível em: https://doi.org/10.1007/s11235-020-00733-2
+
+LAMPORT, A. I. . C. L. Password authentication with insecure communication.
+Communications of the ACM, v. 24, p. 770–772, 1981. Disponível em: https://doi.org/10.1145/358790.358797
+
+RABOY, N. Phishing Activity Trends Report, 2nd Quarter 2020. [S.l.],
+2014. Disponível em: https://www.thepolyglotdeveloper.com/2014/10/generate-time-based-one-time-passwords-javascript
+
+RABOY, N. Build A Time-Based One-Time Password Manager With Ionic 2.
+[S.l.], 2016. Disponível em: https://www.thepolyglotdeveloper.com/2016/08/build-time-based-one-time-password-manager-ionic-2
+
+VERIZON. 2021 Data Breach Investigations Report. [S.l.], 2021. Disponível em: https://www.verizon.com/business/resources/reports/2021-data-breach-investigations-report.pdf
+
