@@ -76,7 +76,13 @@ Uma biblhoteca escrita em TypeScript/JavaScript que implementa de forma completa
 ## Criando serviços 
 Para este projeto iremos à raiz do projeto, se dirigir a pasta \textbf{./src/app/ }e no mesmo criar uma nova pasta com o nome **services**. Futuramente esta pasta pode ser utilizada pode ser utilizada para inserir novos serviços na aplicação, como um componente para comunicação com serviços via API, entre outros.
 
- Serviço pode ser entendido como uma classe que atua como uma unidade da regra de negócios, poderíamos dizer algo onde é possível armazenar, centralizar de forma organizada. Em um projeto Ionic os serviços não possuem visualização, apenas códigos reutilizável, o principal motivo pelo qual precisamos dos mesmos neste aplicação, pois podem ser importados em páginas, componentes, diretivas e até mesmo em outros serviços. 
+Um serviço pode ser entendido como uma componente que desempenha um papel fundamental nas regras de negócio de um sistema. Ele permite armazenar e centralizar funcionalidades de forma organizada.
+
+No contexto de um projeto Ionic, os serviços não possuem uma interface visual, consistindo apenas de código reutilizável. Isso ocorre porque sua principal função é disponibilizar funcionalidades que podem ser importadas e utilizadas em várias partes da aplicação, como páginas, componentes, diretivas e até mesmo outros serviços.
+
+Os serviços no Ionic desempenham um papel crucial na criação de funcionalidades compartilhadas e na separação de preocupações. Eles permitem encapsular lógicas de negócio complexas e torná-las acessíveis em diferentes partes do aplicativo. Além disso, a reutilização de serviços promove um código mais limpo e organizado, facilitando a manutenção e o desenvolvimento contínuo do projeto.
+
+Em resumo, os serviços no Ionic são unidades funcionais que atuam como blocos de construção essenciais para a implementação das regras de negócio. Sua importância reside na capacidade de armazenar e disponibilizar funcionalidades de forma organizada, promovendo a reutilização de código e facilitando o desenvolvimento de um aplicativo robusto e escalável. 
 
 
 ### Serviço database
